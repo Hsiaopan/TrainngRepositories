@@ -3,8 +3,11 @@ package myflink.DataStreamAPI;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.DataStreamSource;
+import org.apache.flink.streaming.api.datastream.SingleOutputStreamOperator;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
+
+import myflink.DataStreamAPI.MyStreamingSource.Item;
 
 import java.util.Random;
 
@@ -79,13 +82,15 @@ class StreamingDemo {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         // 获取数据源
-        DataStreamSource<MyStreamingSource.Item> text;
-        text = env.addSource(new MyStreamingSource()).setParallelism(1);
-        DataStream<MyStreamingSource.Item> itemDataStream = text.map(
-                (MapFunction<MyStreamingSource.Item, MyStreamingSource.Item>) value -> value);
+        DataStreamSource<MyStreamingSource.Item> itemDataStreamSource;
+        itemDataStreamSource = env.addSource(new MyStreamingSource()).setParallelism(1);
+
+        // map
+        SingleOutputStreamOperator<Object> mapItems;
+        mapItems = itemDataStreamSource.map((MapFunction<MyStreamingSource.Item, Object>) Item::getName);
 
         // 打印结果
-        itemDataStream.print().setParallelism(1);
+        mapItems.print().setParallelism(1);
         String jobName = "user defined streaming source";
         env.execute(jobName);
 
