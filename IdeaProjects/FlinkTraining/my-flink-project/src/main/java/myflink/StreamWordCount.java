@@ -30,7 +30,7 @@ public class StreamWordCount {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
 
         // 从文件中获取数据源
-        final String fileName = "/Users/hsiaopan/IdeaProjects/OtherDocs/word-counts.txt";
+        final String fileName = "/Users/hsiaopan/Repositories/IdeaProjects/OtherDocs/word-counts.txt";
         DataStream<String> source = env.readTextFile(fileName);
 
         // 单词计数

@@ -26,10 +26,10 @@ import org.apache.flink.util.Collector;
 
 
 public class BatchWordCount {
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
 
-        final String fileName = "/Users/hsiaopan/IdeaProjects/OtherDocs/word-counts.txt";
+        final String fileName = "/Users/hsiaopan/Repositories/IdeaProjects/OtherDocs/word-counts.txt";
         DataSource<String> dataSource = env.readTextFile(fileName);
 
         dataSource

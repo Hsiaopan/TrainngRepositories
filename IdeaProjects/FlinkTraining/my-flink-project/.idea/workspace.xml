@@ -9,7 +9,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b58a6703-866c-4840-9895-99c6a5cc8353" name="Default Changelist" comment="" />
+    <list default="true" id="b58a6703-866c-4840-9895-99c6a5cc8353" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myflink/BatchWordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myflink/BatchWordCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myflink/DataStreamAPI/MyStreamingSource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myflink/DataStreamAPI/MyStreamingSource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/myflink/StreamWordCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/myflink/StreamWordCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myflink/BatchWordCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myflink/BatchWordCount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/myflink/StreamWordCount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/myflink/StreamWordCount.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../OtherDocs/word-counts.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../OtherDocs/word-counts.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,6 +33,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
       <filtered-out-file-type name="LOCAL_BRANCH" />
@@ -33,10 +44,19 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="000d40c1-4c49-4b4b-a94c-49ca4f776ba1" />
+        <option name="url" value="https://github.com/Hsiaopan/TrainngRepositories.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1r4eOO2rE39WiCVntVbq9Fl7MAQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -53,7 +73,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="org.infernus.idea.checkstyle.CheckStyleConfigurable" />
   </component>
-  <component name="RunManager" selected="Application.SocketStreamWordCount">
+  <component name="RunManager" selected="Application.StreamingDemo">
     <configuration name="BatchWordCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -102,19 +122,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StreamWordCount (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="myflink.StreamWordCount" />
-      <module name="my-flink-project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="myflink.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="StreamWordCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_281.jdk/Contents/Home" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -131,13 +138,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+    <configuration name="StreamingDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
+      <option name="MAIN_CLASS_NAME" value="myflink.DataStreamAPI.StreamingDemo" />
+      <module name="my-flink-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="myflink.DataStreamAPI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="class" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,16 +171,16 @@
       <item itemvalue="Application.BatchWordCount" />
       <item itemvalue="Application.SocketWindowWordCount" />
       <item itemvalue="Application.StreamWordCount" />
-      <item itemvalue="Application.StreamWordCount (1)" />
       <item itemvalue="Application.SocketStreamWordCount" />
+      <item itemvalue="Application.StreamingDemo" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SocketStreamWordCount" />
-        <item itemvalue="Application.SocketWindowWordCount" />
+        <item itemvalue="Application.StreamingDemo" />
         <item itemvalue="Application.StreamWordCount" />
         <item itemvalue="Application.BatchWordCount" />
-        <item itemvalue="Application.StreamWordCount (1)" />
+        <item itemvalue="Application.SocketStreamWordCount" />
+        <item itemvalue="Application.SocketWindowWordCount" />
       </list>
     </recent_temporary>
   </component>
@@ -169,11 +194,37 @@
       <updated>1618239760108</updated>
       <workItem from="1618239762994" duration="470000" />
       <workItem from="1618240423664" duration="16123000" />
+      <workItem from="1618505594284" duration="427000" />
+      <workItem from="1618508140864" duration="1410000" />
+      <workItem from="1618586048346" duration="4282000" />
     </task>
+    <task id="LOCAL-00001" summary="DataStreamAPI">
+      <created>1618587779313</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1618587779313</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="DataStreamAPI" />
+    <option name="LAST_COMMIT_MESSAGE" value="DataStreamAPI" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
