@@ -43,7 +43,7 @@ class Handler extends Thread {
             try {
                 this.socket.close();
             } catch (IOException ioException) {
-
+                // todo
             }
             System.out.println("Client disconnected.");
         }
@@ -68,11 +68,11 @@ class Handler extends Thread {
             System.out.println(header);
         }
         System.out.println(requestOK ? "Response OK" : "Response Error");
+
         if (!requestOK) {
             bufferedWriter.write("404 Not Found\r\n");
             bufferedWriter.write("Content-Length: 0\r\n");
             bufferedWriter.write("\r\n");
-            bufferedWriter.flush();
         } else {
             String data = "<html><body><h1>Hello, world!</h1></body></html>";
             int length = data.getBytes(StandardCharsets.UTF_8).length;
@@ -82,7 +82,7 @@ class Handler extends Thread {
             bufferedWriter.write("Content-Length: " + length + "\r\n");
             bufferedWriter.write("\r\n");
             bufferedWriter.write(data);
-            bufferedWriter.flush();
         }
+        bufferedWriter.flush();
     }
 }
