@@ -1,4 +1,4 @@
-package cn.hsiaopan.learnjava;
+package cn.hsiaopan.learnjava.servlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -11,20 +11,15 @@ import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/")
 public class HelloServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // 设置响应类型
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
-        // 获取输出流
-        PrintWriter printWriter = response.getWriter();
-
         String name = request.getParameter("name");
-        String word = "world";
+        if (name == null) {
+            name = "world";
+        }
 
-        if (name != null && !name.isBlank()) word = name;
-        // 写入响应
-        printWriter.write("<h1>Hello, " + word + "!</h1>");
-        // flush强制退出
+        PrintWriter printWriter = response.getWriter();
+        printWriter.write("<h1>Hello, " + name + "!</h1>");
         printWriter.flush();
     }
 }
